@@ -146,7 +146,11 @@ public class ListManagerController {
 
     @FXML
     public void SortALLItemsClicked(ActionEvent actionEvent) {
-
+        //use ListViewListClicked to find the index of the given ToDoList
+        //call the SortToDOListDueDate function
+        //I would call the DisplayAllItems function on the currently clicked ToDOList in the ListView
+        //I would store the returned string in a new string variable
+        //and then I would display the text in the ItemsTextArea
     }
 
     @FXML
@@ -220,7 +224,7 @@ public class ListManagerController {
     public String FormatfileStringManager() {
         //make a new output string
         //use a for loop to navigate through the Arraylist of ToDOLists
-        //each ToDolIst should call ToDoList'sFormatFileString function and
+        //each ToDoList should call ToDoList'sFormatFileString function and
         //concatenate the result to the output string
         //return the output string
 

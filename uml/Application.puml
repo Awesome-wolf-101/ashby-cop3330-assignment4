@@ -10,10 +10,10 @@ class App{
 class Item{
     - String Description
     - String DueDate
-    - boolean iscompleted
+    - boolean completed
 
-    +isIscompleted()
-    +setIscompleted()
+    +iscompleted()
+    +setcompleted()
     +getDueDate()
     +setDueDate()
     +getDescription()
@@ -23,21 +23,75 @@ class Item{
 
 class List{
 
-    -String Title
+    -String ToDoListTitle
     -ArrayList<Item> items
 
+    +ToDoList()
+    +searchDueDate()
+    +searchByDescription()
     +getItems()
     +setItems()
     +getTitle()
     +setTitle()
+    +AddItem()
+    +RemoveItem()
+    +DisplayAllItems()
+    +DisplayCompleteItems()
+    +DisplayIncompleteItems()
+    +SaveTODOList()
+    +FormatfileString()
+    +LoadTODOList()
+    +IsDateFormatCorrect()
+    +SortToDOListDueDate()
 
 }
 
-class ListManager{
+class ListManagerController{
+    -ArrayList<Item> lists
+    - TextArea ItemsTextArea
+    - TextField EditDescriptionCurrentItemDueDate
+    - TextField EditDescriptionCurrentItemDescription
+    - TextField EditDueDateNewDueDate
+    - TextField EditDueDateCurrentItemDescription
+    - TextField EditDueDateCurrentItemDueDate
+    - TextField EditCompletedStatusCurrentItemDescription
+    - TextField EditCompletedStatusCurrentItemDueDate
+    - TextField EditCompletedStatusNewCompletedStatus
+    - TextField EditDescriptionNewDescription
+    - TextField AddItemNewItemDescription
+    - TextField AddItemNewItemDueDate
+    - TextField DeleteItemCurrentItemDesciption
+    - TextField DeleteItemCurrentItemDueDate
+    - TextField LoadToDoListToDoListTitle
+    - TextField NewToDoListTitleTextField
 
--ArrayList<List> Lists
-
+    +ShowAllIncompleteClicked()
+    +ShowAllCompleteItemsClicked()
+    +SaveToDoListClicked()
+    +DeleteItemClicked()
+    +EditDescriptionClicked()
+    +AddItemClicked()
+    +SaveListOFToDoListsClicked()
+    +LoadTODOLISTClicked()
+    +EditDueDateClicked()
+    +EditCompletedStatusClicked()
+    +SortALLItemsClicked()
+    +ShowAllItemsClicked()
+    +LoadListOfTODOLISTsClicked()
+    +DeleteThisTODOLISTClicked()
+    +AddToDoListClicked()
+    +DisplayItems()
+    +ListViewListClicked()
+    +call()
+    +SaveListOfTODOList()
+    +FormatfileStringManager()
+    +LoadListofTODOLists()
+    +RemoveToDoList()
+    +AddToDoList()
 
 }
 
+List -- Item
+ListManagerController-- List
+App -- ListManagerController
 @enduml
