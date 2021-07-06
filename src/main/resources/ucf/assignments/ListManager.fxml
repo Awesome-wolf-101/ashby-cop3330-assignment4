@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="1063.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ListManagerController">
+   <children>
+      <TextArea fx:id="ItemsTextArea" editable="false" layoutX="292.0" layoutY="35.0" prefHeight="223.0" prefWidth="766.0">
+         <padding>
+            <Insets top="8.0" />
+         </padding></TextArea>
+      <ListView id="TODOLists" fx:id="TODOLISTSFIELD" layoutX="20.0" layoutY="32.0" onMouseClicked="#ListViewListClicked" prefHeight="255.0" prefWidth="211.0">
+         <padding>
+            <Insets top="8.0" />
+         </padding></ListView>
+      <Button layoutX="293.0" layoutY="275.0" mnemonicParsing="false" onAction="#ShowAllIncompleteClicked" text="Show All Incomplete Items" />
+      <Button layoutX="298.0" layoutY="313.0" mnemonicParsing="false" onAction="#ShowAllCompleteItemsClicked" text="Show All complete Items" />
+      <Button layoutX="473.0" layoutY="275.0" mnemonicParsing="false" onAction="#SaveToDoListClicked" text="Save This ToDo-List" />
+      <Text layoutX="303.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Items:" wrappingWidth="84.564453125" />
+      <Text layoutX="41.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ToDOLists" wrappingWidth="84.564453125" />
+      <Button layoutX="293.0" layoutY="615.0" mnemonicParsing="false" onAction="#DeleteItemClicked" text="Delete Item" />
+      <Button layoutX="305.0" layoutY="422.0" mnemonicParsing="false" onAction="#EditDescriptionClicked" text="Edit Description" />
+      <Button layoutX="299.0" layoutY="576.0" mnemonicParsing="false" onAction="#AddItemClicked" text="Add Item" />
+      <Button layoutX="298.0" layoutY="677.0" mnemonicParsing="false" onAction="#LoadTODOLISTClicked" text="Load ToDOList" />
+      <Button layoutX="300.0" layoutY="482.0" mnemonicParsing="false" onAction="#EditDueDateClicked" text="Edit Due Date" />
+      <Button layoutX="298.0" layoutY="532.0" mnemonicParsing="false" onAction="#EditCompletedStatusClicked" text="Edit Completed Status" />
+      <TextField fx:id="EditDescriptionCurrentItemDueDate" layoutX="578.0" layoutY="422.0" prefHeight="25.0" prefWidth="117.0" />
+      <TextField fx:id="EditDescriptionCurrentItemDescription" layoutX="413.0" layoutY="422.0" />
+      <Text layoutX="413.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Item Description" />
+      <Text layoutX="586.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Item DueDate" />
+      <TextField fx:id="EditDueDateNewDueDate" layoutX="718.0" layoutY="482.0" />
+      <Text layoutX="729.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Description" />
+      <Text layoutX="404.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Item Description" />
+      <TextField fx:id="EditDueDateCurrentItemDescription" layoutX="404.0" layoutY="482.0" />
+      <Text layoutX="578.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Item DueDate" />
+      <TextField fx:id="EditDueDateCurrentItemDueDate" layoutX="578.0" layoutY="482.0" prefHeight="25.0" prefWidth="117.0" />
+      <Text layoutX="716.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Due Date" />
+      <Button layoutX="298.0" layoutY="353.0" mnemonicParsing="false" onAction="#SortALLItemsClicked" text="Sort All Items" />
+      <Text layoutX="445.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Item Description" />
+      <TextField fx:id="EditCompletedStatusCurrentItemDescription" layoutX="436.0" layoutY="532.0" />
+      <Text layoutX="599.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Item DueDate" />
+      <TextField fx:id="EditCompletedStatusCurrentItemDueDate" layoutX="599.0" layoutY="532.0" prefHeight="25.0" prefWidth="117.0" />
+      <Text layoutX="734.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Completed Status" />
+      <TextField fx:id="EditCompletedStatusNewCompletedStatus" layoutX="729.0" layoutY="532.0" />
+      <TextField fx:id="EditDescriptionNewDescription" layoutX="718.0" layoutY="422.0" prefHeight="25.0" prefWidth="250.0" />
+      <Text layoutX="422.0" layoutY="573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Item Description" />
+      <TextField fx:id="AddItemNewItemDescription" layoutX="413.0" layoutY="576.0" />
+      <TextField fx:id="AddItemNewItemDueDate" layoutX="591.0" layoutY="576.0" prefHeight="25.0" prefWidth="117.0" />
+      <Text layoutX="599.0" layoutY="573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Item DueDate" />
+      <Text layoutX="408.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Item Description" />
+      <TextField fx:id="DeleteItemCurrentItemDesciption" layoutX="405.0" layoutY="628.0" />
+      <Text layoutX="586.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Item DueDate" />
+      <TextField fx:id="DeleteItemCurrentItemDueDate" layoutX="586.0" layoutY="628.0" prefHeight="25.0" prefWidth="117.0" />
+      <Text layoutX="421.0" layoutY="673.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ToDOList Title" />
+      <TextField fx:id="LoadToDoListToDoListTitle" layoutX="405.0" layoutY="677.0" />
+      <Button layoutX="473.0" layoutY="313.0" mnemonicParsing="false" onAction="#ShowAllItemsClicked" text="Show All Items" />
+      <Button layoutX="5.0" layoutY="301.0" mnemonicParsing="false" onAction="#LoadListOfTODOLISTsClicked" text="Load List Of ToDo-Lists" />
+      <Button layoutX="5.0" layoutY="341.0" mnemonicParsing="false" onAction="#DeleteThisTODOLISTClicked" text="Delete This ToDo-List" />
+      <Button layoutX="5.0" layoutY="402.0" mnemonicParsing="false" onAction="#AddToDoListClicked" text="Add ToDo-List" />
+      <Text layoutX="113.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New ToDo-List title" />
+      <TextField fx:id="NewToDoListTitleTextField" layoutX="113.0" layoutY="402.0" onAction="#AddToDOListClicked" />
+      <Button layoutX="14.0" layoutY="453.0" mnemonicParsing="false" onAction="#SaveListOFToDoListsClicked" text="Save List Of ToDo-Lists" />
+   </children>
+   <padding>
+      <Insets top="8.0" />
+   </padding>
+   <opaqueInsets>
+      <Insets top="8.0" />
+   </opaqueInsets>
+</AnchorPane>

@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App{
+
++main()
++start()
+}
+
+class Item{
+    - String Description
+    - String DueDate
+    - boolean iscompleted
+
+    +isIscompleted()
+    +setIscompleted()
+    +getDueDate()
+    +setDueDate()
+    +getDescription()
+    +setDescription()
+
+}
+
+class List{
+
+    -String Title
+    -ArrayList<Item> items
+
+    +getItems()
+    +setItems()
+    +getTitle()
+    +setTitle()
+
+}
+
+class ListManager{
+
+-ArrayList<List> Lists
+
+
+}
+
+@enduml
