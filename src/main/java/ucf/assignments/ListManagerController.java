@@ -38,6 +38,8 @@ public class ListManagerController {
     public TextField NewToDoListTitleTextField;
 
 //create a new array list of ToDOLists to keep track of them all
+
+    //satisfies requirement 15
     @FXML
     public void ShowAllIncompleteClicked(ActionEvent actionEvent) {
         //I would call the DisplayIncompleteItems function on the currently clicked ToDOList in the ListView
@@ -48,6 +50,7 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies requirement 16
     @FXML
     public void ShowAllCompleteItemsClicked(ActionEvent actionEvent) {
         //I would call the DisplayCompleteItems function on the currently clicked ToDOList in the ListView
@@ -57,7 +60,7 @@ public class ListManagerController {
         //I would store the returned string in a new string variable
         //and then I would display the text in the ItemsTextArea
     }
-
+    //satisfies requirement 17
     @FXML
     public void SaveToDoListClicked(ActionEvent actionEvent) {
         //use ListViewListClicked to find the index of the given ToDoList
@@ -67,6 +70,7 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies requirement 10
     @FXML
     public void DeleteItemClicked(ActionEvent actionEvent) {
         //use ListViewListClicked to find the index of the given ToDoList
@@ -79,6 +83,7 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies requirement 11
     @FXML
     public void EditDescriptionClicked(ActionEvent actionEvent) {
         //use ListViewListClicked to find the index of the given ToDoList
@@ -92,6 +97,7 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies requirement 9
     @FXML
     public void AddItemClicked(ActionEvent actionEvent) {
         //use ListViewListClicked to find the index of the given ToDoList
@@ -102,12 +108,14 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies requirement 18
     @FXML
     public void SaveListOFToDoListsClicked(ActionEvent actionEvent) {
         //I could call the SaveListOfTODOLists function on the ArrayList of Lists in order
         //to save the lists of lists to external storage
     }
 
+    //satisfies requirement 19
     @FXML
     public void LoadTODOLISTClicked(ActionEvent actionEvent) {
         //use ListViewListClicked to find the index of the given ToDoList
@@ -118,6 +126,7 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies requirement 12
     @FXML
     public void EditDueDateClicked(ActionEvent actionEvent) {
         //use ListViewListClicked to find the index of the given ToDoList
@@ -131,6 +140,7 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies requirement 13
     @FXML
     public void EditCompletedStatusClicked(ActionEvent actionEvent) {
         //use ListViewListClicked to find the index of the given ToDoList
@@ -144,6 +154,7 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies bonus requirement
     @FXML
     public void SortALLItemsClicked(ActionEvent actionEvent) {
         //use ListViewListClicked to find the index of the given ToDoList
@@ -153,6 +164,7 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies requirement 14
     @FXML
     public void ShowAllItemsClicked(ActionEvent actionEvent) {
         //I would call the DisplayAllItems function on the currently clicked ToDOList in the ListView
@@ -160,24 +172,28 @@ public class ListManagerController {
         //and then I would display the text in the ItemsTextArea
     }
 
+    //satisfies requirement 20
     @FXML
     public void LoadListOfTODOLISTsClicked(ActionEvent actionEvent) {
         //call the LoadListofTODOLists function, and set the current
         //array list of ToDOLists to the returned ArrayList of ToDOLists
     }
 
+    //satisfies requirement 7
     @FXML
     public void DeleteThisTODOLISTClicked(ActionEvent actionEvent) {
         //use ListViewListClicked to find the index of the given ToDoList
         //then call the RemoveToDoList function
     }
 
+    //satisfies requirement 6
     @FXML
     public void AddToDoListClicked(ActionEvent actionEvent) {
         //get the text from the NewToDoListTitleTextField text field
         //pass that text into the AddToDoList function
     }
 
+    //satisfies requirement 14
     public void DisplayItems(ToDoList List)
     {
         //displays all of the items and their attributes
@@ -204,6 +220,7 @@ public class ListManagerController {
         return cell;
     }
 
+    //satisfies requirement 18
     public void SaveListOfTODOList(ArrayList<Item> items) {
         //get the users directory using system.get property
         //store the user's directory pathname in a string
@@ -231,6 +248,7 @@ public class ListManagerController {
         return "";
     }
 
+    //satisfies requirement 20
     public ArrayList<ToDoList> LoadListofTODOLists(String TODOListName) {
         //get the users directory using system.get property
         //store the user's directory pathname in a string
@@ -245,14 +263,14 @@ public class ListManagerController {
         ArrayList<ToDoList> Lists = new ArrayList<ToDoList>();
         return Lists;
     }
-
+    //satisfies requirement 7
     public ArrayList<ToDoList>  RemoveToDoList(int index) {
         //use the remove method to remove the list at the given index
         //using array lists built-in remove function
         ArrayList<ToDoList> Lists = new ArrayList<ToDoList>();
         return Lists;
     }
-
+//satisfies requirement 6
     public ArrayList<ToDoList> AddToDoList(String Title) {
         // make a new list
         //use the add method built into arraylists to add it to lists
